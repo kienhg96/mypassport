@@ -1,0 +1,31 @@
+{
+  "name": "mypassport",
+  "version": "1.0.0",
+  "description": "My passport tutorial",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kienhg96/mypassport.git"
+  },
+  "author": "HoangKien",
+  "dependencies": {
+    "async": "~0.2.8",
+    "express": "~3.2.4",
+    "mongodb": "^2.1.18",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "socket.io": "~0.9.14"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "passport"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kienhg96/mypassport/issues"
+  },
+  "homepage": "https://github.com/kienhg96/mypassport#readme"
+}
