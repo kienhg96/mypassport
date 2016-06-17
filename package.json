@@ -10,6 +10,9 @@
   "author": "HoangKien",
   "dependencies": {
     "async": "~0.2.8",
+    "body-parser": "^1.15.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
     "dotenv": "^2.0.0",
     "express": "~3.2.4",
     "express-session": "^1.13.0",
@@ -20,7 +23,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "dev" : "nodemon server.js"
+    "dev": "nodemon server.js"
   },
   "devDependencies": {},
   "keywords": [
