@@ -1,13 +1,16 @@
 'use strict;'
-var cookieParser = require('cookie-parser');
+
 var flash = require('connect-flash');
 var express = require("express");
-var ObjectID = require('mongodb').ObjectID;
+
 var expressSession = require("express-session");
 require('dotenv').load();
 var passport = require("passport");
 var LocalStrategy = require('passport-local').Strategy;
+
 var mongo = require('mongodb').MongoClient;
+var ObjectID = require('mongodb').ObjectID;
+
 var app = express();
 // router
 var bodyParser = require("body-parser");
@@ -16,7 +19,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 app.use(flash());
-app.use(cookieParser());
+
 var db;
 var collection;
 // Connect Database
@@ -107,7 +110,7 @@ app.get('/', function(req, res){
 app.get('/home', function(req,res){
     //console.log(req.isAuthenticated());
     if (req.isAuthenticated()){
-        res.send("Login as: " + req.user.username);
+        res.send("Login as: " + req.user.username + ' <a href="/logout">Logout</a>');
         //console.log(req.user.password);
     }
     else {
